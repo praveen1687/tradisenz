@@ -1,88 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        #countdown {
-            display: flex;
-            gap: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .time-box {
-            background: #161b22;
-            padding: 15px 20px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            min-width: 80px;
-        }
-        .label {
-            font-size: 0.8rem;
-            color: #8b949e;
-            text-transform: uppercase;
-            display: block;
-            margin-top: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TradisenZ Foods - Coming Soon</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f8f5ee;color:#2f4f2f;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.card{max-width:760px;background:white;padding:48px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);text-align:center}
+h1{font-size:52px;margin:0;color:#1f5d32}
+h2{font-weight:400;margin:10px 0 25px;color:#8b6b2e}
+p{font-size:18px;line-height:1.6}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px 0}
+.badge{background:#edf6ed;padding:10px 16px;border-radius:20px}
+.btn{display:inline-block;background:#1f7a3d;color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:bold}
+footer{margin-top:30px;color:#666;font-size:14px}
+</style>
 </head>
 <body>
-
-    <h1>Something Awesome is Coming</h1>
-    <p>We are working hard to bring you the best experience. Stay tuned!</p>
-
-    <div id="countdown">
-        <div class="time-box"><span id="days">00</span><span class="label">Days</span></div>
-        <div class="time-box"><span id="hours">00</span><span class="label">Hours</span></div>
-        <div class="time-box"><span id="minutes">00</span><span class="label">Minutes</span></div>
-        <div class="time-box"><span id="seconds">00</span><span class="label">Seconds</span></div>
-    </div>
-
-    <script>
-        // Set your target launch date here
-        const launchDate = new Date("Dec 31, 2026 00:00:00").getTime();
-
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<h3>We are Live!</h3>";
-            }
-        }, 1000);
-    </script>
+<div class="card">
+<h1>TradisenZ Foods</h1>
+<h2>Pure Tradition. Healthy Living.</h2>
+<p><strong>🌾 Coming Soon 🌾</strong></p>
+<p>Premium Traditional Rice • Native Millets • Pulses<br>
+Directly sourced from trusted farmers.</p>
+<div class="badges">
+<div class="badge">✔ Premium Quality</div>
+<div class="badge">✔ Freshly Packed</div>
+<div class="badge">✔ Honest Pricing</div>
+<div class="badge">✔ From Farmers to Families</div>
+</div>
+<p><a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a></p>
+<footer>
+Dharmapuri • Salem • Tamil Nadu<br>
+Email: hello@tradisenzfoods.in
+</footer>
+</div>
 </body>
 </html>
